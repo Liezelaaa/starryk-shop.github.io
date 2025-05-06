@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starry K-Shop - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/STYLES1.CSS">
+</head>
+<body>
+ 
+    <nav>
+        <div class="logo">Starry K-Shop</div>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="ABOUT1.HTML" class="nav-link">About</a></li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Shop</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Shop</div>
+              <a href="PRODUCTS1.HTML">Products</a>
+              <a href="HOW1.HTML">How It Works</a>
+              <a href="TESTIMONY1.HTML">Testimonials</a>
+            </div>
+          </li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Resources</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Learn</div>
+              <a href="TUTORIALS1.HTML">Tutorials</a>
+              <a href="BLOG1.HTML">Blog</a>
+              <a href="NEWSLETTERS1.HTML">Newsletters</a>
+              <a href="DOWNLOADS1.HTML">Downloads</a>
+            </div>
+          </li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Support</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Support</div>
+              <a href="SUPPORT1.HTML">Customer Support</a>
+              <a href="FAQ1.HTML">FAQ</a>
+              <a href="CONTACT1.HTML">Contact</a>
+            </div>
+          </li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Community</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Community</div>
+              <a href="SOCMED1.HTML">Social Media</a>
+              <a href="PRIVACY1.HTML">Privacy</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="LOGIN1.HTML" class="nav-link">Logout</a></li>
+        </ul>
+      </nav>
+
+      <main class="testimony-section">
+
+  <header>
+    <h1>🌟 Customer Testimonials</h1>
+    <p>What our amazing K-pop fans are saying about The Starry K-Shop 💜</p>
+  </header>
+
+  <section class="testimonials">
+
+    <!-- Feedback Form -->
+    <div class="feedback-form">
+      <h2>Leave Your Testimonial 💬</h2>
+      <input type="text" id="name" placeholder="Your Name or @username" required />
+      <select id="rating">
+        <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+      </select>
+      <textarea id="message" rows="4" placeholder="Your message..." required></textarea>
+      <button onclick="submitFeedback()">Submit</button>
+    </div>
+
+    <!-- Static Testimonials -->
+    <div id="testimonial-list">
+      <div class="testimonial">
+        <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+        <h3>@taeluvr_97</h3>
+        <p>“I ordered the Stray Kids MAXIDENT album, and it arrived so fast and in perfect condition!! The freebies were super cute too 🥺 Will definitely order again.”</p>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+        <h3>MinYoongiMagic</h3>
+        <p>“Been scammed before by shady merch pages, so I was nervous, but Starry K-Shop is the real deal. My BTS lightstick came sealed and authentic. I even got tracking updates regularly!”</p>
+      </div>
+    </div>
+
+  </section>
+  </main>
+
+  <footer>
+    <p style="text-align:center; padding:1rem; color:#7a5ea6;">&copy; 2025 Starry K-Shop. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Load testimonials from localStorage
+    window.onload = function () {
+      const stored = localStorage.getItem("starryTestimonials");
+      if (stored) {
+        const testimonials = JSON.parse(stored);
+        testimonials.forEach(addTestimonialToPage);
+      }
+    };
+
+    function submitFeedback() {
+      const name = document.getElementById("name").value.trim();
+      const rating = document.getElementById("rating").value;
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !message) {
+        alert("Please fill in your name and message.");
+        return;
+      }
+
+      const testimonial = { name, rating, message };
+      addTestimonialToPage(testimonial);
+
+      // Save to localStorage
+      let stored = localStorage.getItem("starryTestimonials");
+      let testimonials = stored ? JSON.parse(stored) : [];
+      testimonials.push(testimonial);
+      localStorage.setItem("starryTestimonials", JSON.stringify(testimonials));
+
+      // Clear form
+      document.getElementById("name").value = '';
+      document.getElementById("rating").value = '⭐️⭐️⭐️⭐️⭐️';
+      document.getElementById("message").value = '';
+    }
+
+    function addTestimonialToPage(testimonial) {
+      const container = document.getElementById("testimonial-list");
+      const div = document.createElement("div");
+      div.className = "testimonial";
+      div.innerHTML = `
+        <div class="stars">${testimonial.rating}</div>
+        <h3>${testimonial.name}</h3>
+        <p>“${testimonial.message}”</p>
+      `;
+      container.prepend(div); // Add new testimonials on top
+    }
+  </script>
+
+</body>
+</html>

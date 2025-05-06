@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - Starry K-Shop</title>
+  <link rel="stylesheet" href="css/STYLES1.CSS" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  
+  <nav>
+    <div class="logo">Starry K-Shop</div>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="ABOUT1.HTML" class="nav-link">About</a></li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link">Shop</a>
+        <div class="dropdown">
+          <div class="dropdown-title">Shop</div>
+          <a href="PRODUCTS1.HTML">Products</a>
+          <a href="HOW1.HTML">How It Works</a>
+          <a href="TESTIMONY1.HTML">Testimonials</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link">Resources</a>
+        <div class="dropdown">
+          <div class="dropdown-title">Learn</div>
+          <a href="TUTORIALS1.HTML">Tutorials</a>
+          <a href="BLOG1.HTML">Blog</a>
+          <a href="NEWSLETTERS1.HTML">Newsletters</a>
+          <a href="DOWNLOADS1.HTML">Downloads</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link">Support</a>
+        <div class="dropdown">
+          <div class="dropdown-title">Support</div>
+          <a href="SUPPORT1.HTML">Customer Support</a>
+          <a href="FAQ1.HTML">FAQ</a>
+          <a href="CONTACT1.HTML">Contact</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link">Community</a>
+        <div class="dropdown">
+          <div class="dropdown-title">Community</div>
+          <a href="SOCMED1.HTML">Social Media</a>
+          <a href="PRIVACY1.HTML">Privacy</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="LOGIN1.HTML" class="nav-link">Logout</a></li>
+    </ul>
+  </nav>
+  <body>
+  </div>
+</section>
+<body>
+  <div class="top-bar">
+    <h1>🌟 Starry K-Shop Products</h1>
+    <button onclick="toggleCart()">
+      <i class="fas fa-shopping-cart"></i> View Cart (<span id="cart-count">0</span>)
+    </button>
+  </div>
+  
+  
+  <main class="product-page">
+    <section class="product-category">
+      <h2>BTS Merchandise</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/bts1.jpg" alt="BTS Lightstick Ver 4" />
+          <h3>BTS Lightstick Ver 4</h3>
+          <p>Official Army Bomb with Bluetooth Mode</p>
+          <p class="price">₱3,200</p>
+          <button onclick="addToCart('BTS Lightstick Ver 4', 3200)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/bts2.jpg" alt="BTS Proof Album" />
+          <h3>BTS Proof Album</h3>
+          <p>3CD Deluxe Box Set with Photocards & Posters</p>
+          <p class="price">₱2,400</p>
+          <button onclick="addToCart('BTS Proof Album', 2400)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/bts3.jpg" alt="BTS Butter Shirt" />
+          <h3>BTS Butter Shirt</h3>
+          <p>Premium cotton fabric - breathable and ultra-soft</p>
+          <p class="price">₱399</p>
+          <button onclick="addToCart('BTS Butter Shirt', 399)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/bts4.jpg" alt="BTS Mini Poster" />
+          <h3>BTS Mini Poster</h3>
+          <p>Complete set of 7 members + 1 group poster</p>
+          <p class="price">₱180</p>
+          <button onclick="addToCart('BTS Mini Poster', 180)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-category">
+      <h2>BLACKPINK Merchandise</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/bp1.jpg" alt="BLACKPINK Lightstick" />
+          <h3>BLACKPINK Lightstick</h3>
+          <p>Hammer Bong Ver. 2 with Bluetooth</p>
+          <p class="price">₱2,000</p>
+          <button onclick="addToCart('BLACKPINK Lightstick', 2000)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/bp4.webp" alt="BORN PINK Album" />
+          <h3>BORN PINK Album</h3>
+          <p>Photobook Version with Random Photocard</p>
+          <p class="price">₱1,150</p>
+          <button onclick="addToCart('BORN PINK Album', 1150)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/bp3.webp" alt="BLACKPINK Keychain" />
+          <h3>BLACKPINK Keychain</h3>
+          <p>Hammer Bong Ver. 2 with Bluetooth</p>
+          <p class="price">₱270</p>
+          <button onclick="addToCart('BLACKPINK Keychain', 270)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/bp2.webp" alt="Blackpink BORN PINK T-Shirt" />
+          <h3>Blackpink BORN PINK T-Shirt</h3>
+          <p>Trendy BORN PINK design</p>
+          <p class="price">₱799</p>
+          <button onclick="addToCart('Blackpink BORN PINK T-Shirt', 799)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-category">
+      <h2>TWICE Merchandise</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/T1.jpg" alt="TWICE Candy Bong Z" />
+          <h3>TWICE Candy Bong Z</h3>
+          <p>Official lightstick</p>
+          <p class="price">₱2,300</p>
+          <button onclick="addToCart('TWICE Candy Bong Z', 2300)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/T2.jpg" alt="READY TO BE Album" />
+          <h3>READY TO BE Album</h3>
+          <p>Includes Photobook, Poster, and 5 Random Photocards</p>
+          <p class="price">₱1,100</p>
+          <button onclick="addToCart('READY TO BE Album', 1100)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/T3.jpg" alt="TWICE ONCE BEGINS CD" />
+          <h3>TWICE ONCE BEGINS CD</h3>
+          <p>Includes Photobook, Poster, and 5 Random Photocards</p>
+          <p class="price">₱1,150</p>
+          <button onclick="addToCart('TWICE ONCE BEGINS CD', 1150)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/T4.jpg" alt="TWICE T-Shirt" />
+          <h3>TWICE T-Shirt</h3>
+          <p>Premium cotton fabric - breathable and ultra-soft</p>
+          <p class="price">₱429</p>
+          <button onclick="addToCart('TWICE T-Shirt', 429)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-category">
+      <h2>ENHYPEN Merchandise</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/e1.jpg" alt="ENHYPEN HOODIE" />
+          <h3>ENHYPEN HOODIE</h3>
+          <p>Enhypen hoodie FATE Design</p>
+          <p class="price">₱950</p>
+          <button onclick="addToCart('ENHYPEN HOODIE', 950)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/e2.jpg" alt="ENHYPEN Keychain" />
+          <h3>ENHYPEN Keychain</h3>
+          <p>Collectible keychain</p>
+          <p class="price">₱300</p>
+          <button onclick="addToCart('ENHYPEN Keychain', 300)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/e3.jpg" alt="ENHYPEN Lightstick" />
+          <h3>ENHYPEN Lightstick</h3>
+          <p> Complete accessories and Photocard</p>
+          <p class="price">₱3,299</p>
+          <button onclick="addToCart('ENHYPEN Lightstick', 3299)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/e4.jpg" alt="ENHYPEN MANIFESTO ALBUM" />
+          <h3>ENHYPEN MANIFESTO ALBUM</h3>
+          <p>Collectible Photocards of all Members</p>
+          <p class="price">₱1,200</p>
+          <button onclick="addToCart('ENHYPEN MANIFESTO ALBUM', 1200)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-category">
+      <h2>TXT Merchandise</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/txt1.jpg" alt="TXT Lightstick" />
+          <h3>TXT Lightstick</h3>
+          <p>Compact, Lightweight, and easy to carry</p>
+          <p class="price">₱3,500</p>
+          <button onclick="addToCart('TXT Lightstick', 3500)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/txt2.jpg" alt="TXT Aphria T-shirt" />
+          <h3>TXT Aphria T-shirt</h3>
+          <p>Perfect for every fan </p>
+          <p class="price">₱1,200</p>
+          <button onclick="addToCart('TXT Aphria T-shirt', 1200)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/txt3.jpg" alt="TXT Sanctuary Album" />
+          <h3>TXT Sanctuary Album</h3>
+          <p>Captivating tracks, breathtaking visuals and unforgetable journey into TXT artistry</p>
+          <p class="price">₱2,744</p>
+          <button onclick="addToCart('TXT Sanctuary Album', 2744)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/txt4.jpg" alt="TXT Keychain" />
+          <h3>TXT Keychain</h3>
+          <p>Perfect for adding k-pop flair o your keys and bags</p>
+          <p class="price">₱200</p>
+          <button onclick="addToCart('TXT Keychain', 200)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-category">
+      <h2>NEW JEANS Merchandise</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/nj1.jpg" alt="NEWJEANS PHOTOCARD" />
+          <h3>NEWJEANS PHOTOCARD</h3>
+          <p>Limited Edition</p>
+          <p class="price">₱4,000</p>
+          <button onclick="addToCart('NEWJEANS PHOTOCARD', 4000)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/nj2.jpg" alt="NEWJEANS Lightstick" />
+          <h3>NEWJEANS Lightstick</h3>
+          <p>Shine bright like a star with the official lightstick</p>
+          <p class="price">₱2,500</p>
+          <button onclick="addToCart('NEWJEANS Lightstick', 2500)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/nj3.jpg" alt="NEWJEANS ALBUM" />
+          <h3>NEWJEANS ALBUM</h3>
+          <p>Album with photocards and posters included</p>
+          <p class="price">₱2,499</p>
+          <button onclick="addToCart('NEWJEANS ALBUM', 2499)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/nj4.jpg" alt="NEWJEANS T-Shirt" />
+          <h3>NEWJEANS T-Shirt</h3>
+          <p>Soft cotton fabric and sleek design</p>
+          <p class="price">₱899</p>
+          <button onclick="addToCart('NEWJEANS T-Shirt', 899)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-category">
+      <h2>BT21 Merchandise</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="images/bt1.jpg" alt="BT21 Hoodies" />
+          <h3>BT21 Hoodies</h3>
+          <p>Good fabric and sleek design</p>
+          <p class="price">₱1,200</p>
+          <button onclick="addToCart('BT21 Hoodies', 1200)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/bt2.jpg" alt="BT21 Keychain" />
+          <h3>BT21 Keychain</h3>
+          <p>Affordable charmsfor bags,keys and more</p>
+          <p class="price">₱350</p>
+          <button onclick="addToCart('BT21 Keychain', 350)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/bt3.jpg" alt="BT21 Plushies" />
+          <h3>BT21 Plushies</h3>
+          <p>Soft plushies for new Collection</p>
+          <p class="price">₱450</p>
+          <button onclick="addToCart('BT21 Plushies', 450)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/bt4.jpg" alt="BT21 Tote Bags" />
+          <h3>BT21 Tote Bags</h3>
+          <p>Affordable spacious tote bag</p>
+          <p class="price">₱599</p>
+          <button onclick="addToCart('BT21 Tote Bags',599)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart-view" id="cart">
+      <h2>🛒 Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₱<span id="cart-total">0</span></p>
+    
+      <div class="cart-buttons">
+        <button onclick="clearCart()">🧹 Clear Cart</button>
+        <button onclick="checkout()">✅ Checkout</button>
+      </div>
+    </section>
+    
+  </main>
+
+  <script>
+    const cart = [];
+    function addToCart(product, price) {
+      cart.push({ product, price });
+      document.getElementById("cart-count").textContent = cart.length;
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartItems = document.getElementById("cart-items");
+      const cartTotal = document.getElementById("cart-total");
+      cartItems.innerHTML = "";
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price;
+        const li = document.createElement("li");
+        li.textContent = `${item.product} - ₱${item.price}`;
+        cartItems.appendChild(li);
+      });
+      cartTotal.textContent = total;
+    }
+
+    function toggleCart() {
+      const cartView = document.getElementById("cart");
+      cartView.style.display = cartView.style.display === "block" ? "none" : "block";
+    }
+    function clearCart() {
+  cart.length = 0;
+  updateCart();
+  document.getElementById("cart-count").textContent = "0";
+}
+
+function checkout() {
+  if (cart.length === 0) {
+    alert("🛒 Your cart is empty.");
+  } else {
+    alert("🎉 Thank you for your purchase!\n\nThis feature is under development.");
+    clearCart();
+  }
+}
+  </script>
+</body>
+</html>

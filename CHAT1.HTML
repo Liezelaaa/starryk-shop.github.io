@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Chat - Starry K-Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="css/STYLES1.CSS">
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starry K-Shop - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/STYLES1.CSS">
+</head>
+<body>
+ 
+    <nav>
+        <div class="logo">Starry K-Shop</div>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="ABOUT1.HTML" class="nav-link">About</a></li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Shop</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Shop</div>
+              <a href="PRODUCTS1.HTML">Products</a>
+              <a href="HOW1.HTML">How It Works</a>
+              <a href="TESTIMONY1.HTML">Testimonials</a>
+            </div>
+          </li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Resources</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Learn</div>
+              <a href="TUTORIALS1.HTML">Tutorials</a>
+              <a href="BLOG1.HTML">Blog</a>
+              <a href="NEWSLETTERS1.HTML">Newsletters</a>
+              <a href="DOWNLOADS1.HTML">Downloads</a>
+            </div>
+          </li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Support</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Support</div>
+              <a href="SUPPORT1.HTML">Customer Support</a>
+              <a href="FAQ1.HTML">FAQ</a>
+              <a href="OONTACT1.HTML">Contact</a>
+            </div>
+          </li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Community</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Community</div>
+              <a href="SOCMED1.HTML">Social Media</a>
+              <a href="PRIVACY1.HTML">Privacy</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="LOGIN1.HTML" class="nav-link">Logout</a></li>
+        </ul>
+      </nav>
+<body>
+
+  <section class="chat-section">
+    <div class="chat-header">
+      <h1>Live Chat Help 💬</h1>
+      <p>Tap a topic below and get instant answers from our team!</p>
+    </div>
+
+    <div class="chat-card">
+      <div class="chat-options">
+        <button class="chat-btn" onclick="toggleResponse('response1')">
+          <i data-lucide="package-check"></i>
+          Track My Order
+        </button>
+        <div id="response1" class="chat-response">
+          You can track your order via the "My Orders" page. Just log in and click on the tracking link beside your recent purchase!
+        </div>
+
+        <button class="chat-btn" onclick="toggleResponse('response2')">
+          <i data-lucide="rotate-ccw"></i>
+          Return or Refund Request
+        </button>
+        <div id="response2" class="chat-response">
+          We accept returns within 14 days! Please go to the Return Center on your profile and submit a request.
+        </div>
+
+        <button class="chat-btn" onclick="toggleResponse('response3')">
+          <i data-lucide="user-cog"></i>
+          Change Account Settings
+        </button>
+        <div id="response3" class="chat-response">
+          Go to the "Account Settings" page in your dashboard to update your email, password, or delivery address.
+        </div>
+
+        <button class="chat-btn" onclick="toggleResponse('response4')">
+          <i data-lucide="help-circle"></i>
+          Ask About K-pop Merch
+        </button>
+        <div id="response4" class="chat-response">
+          Absolutely! We offer authentic albums, lightsticks, and official merch. Just visit the "Shop" page for categories.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    lucide.createIcons();
+
+    function toggleResponse(id) {
+      const allResponses = document.querySelectorAll('.chat-response');
+      allResponses.forEach(resp => {
+        if (resp.id === id) {
+          resp.style.display = (resp.style.display === 'block') ? 'none' : 'block';
+        } else {
+          resp.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

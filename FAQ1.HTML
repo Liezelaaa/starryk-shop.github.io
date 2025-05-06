@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starry K-Shop - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="css/STYLES1.CSS">
+</head>
+<body>
+ 
+    <nav>
+        <div class="logo">Starry K-Shop</div>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="ABOUT1.HTML" class="nav-link">About</a></li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Shop</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Shop</div>
+              <a href="PRODUCTS1.HTML">Products</a>
+              <a href="HOW1.HTML">How It Works</a>
+              <a href="TESTIMONY1.HTML">Testimonials</a>
+            </div>
+          </li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Resources</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Learn</div>
+              <a href="TUTORIALS1.HTML">Tutorials</a>
+              <a href="BLOG1.HTML">Blog</a>
+              <a href="NEWSLETTERS1.HTML">Newsletters</a>
+              <a href="DOWNLOADS1.HTML">Downloads</a>
+            </div>
+          </li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Support</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Support</div>
+              <a href="SUPPORT1.HTML">Customer Support</a>
+              <a href="FAQ1.HTML">FAQ</a>
+              <a href="OONTACT1.HTML">Contact</a>
+            </div>
+          </li>
+    
+          <li class="nav-item">
+            <a href="#" class="nav-link">Community</a>
+            <div class="dropdown">
+              <div class="dropdown-title">Community</div>
+              <a href="SOCMED1.HTML">Social Media</a>
+              <a href="PRIVACY1.HTML">Privacy</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="LOGIN1.HTML" class="nav-link">Logout</a></li>
+        </ul>
+      </nav>
+      <body>
+
+        <section class="faq-section">
+          <div class="faq-header">
+            <h1>Frequently Asked Questions 🙋‍♀️</h1>
+            <p>Find quick answers to common questions from our customers!</p>
+          </div>
+      
+          <div class="faq-box">
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span><i data-lucide="truck"></i> When will my order arrive?</span>
+                <i data-lucide="chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Orders typically arrive within 5–10 business days depending on your location and chosen shipping method.
+              </div>
+            </div>
+      
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span><i data-lucide="credit-card-refund"></i> How can I request a refund?</span>
+                <i data-lucide="chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                You can request a refund through your account under “My Orders.” Make sure to check our return policy first!
+              </div>
+            </div>
+      
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span><i data-lucide="badge-check"></i> Are your products official?</span>
+                <i data-lucide="chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Yes! We only sell 100% official K-pop merchandise, directly from certified distributors.
+              </div>
+            </div>
+      
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span><i data-lucide="user-cog"></i> Can I change my delivery address?</span>
+                <i data-lucide="chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Yes! Go to Account Settings before the item ships to update your delivery address.
+              </div>
+            </div>
+          </div>
+        </section>
+      
+        <script>
+          lucide.createIcons();
+      
+          function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allToggles = document.querySelectorAll('.faq-question i:last-child');
+      
+            allAnswers.forEach(el => {
+              if (el !== answer) el.style.display = 'none';
+            });
+      
+            allToggles.forEach(icon => {
+              if (icon !== element.querySelector('i:last-child')) {
+                icon.setAttribute('data-lucide', 'chevron-down');
+              }
+            });
+      
+            const icon = element.querySelector('i:last-child');
+            if (answer.style.display === 'block') {
+              answer.style.display = 'none';
+              icon.setAttribute('data-lucide', 'chevron-down');
+            } else {
+              answer.style.display = 'block';
+              icon.setAttribute('data-lucide', 'chevron-up');
+            }
+            lucide.createIcons();
+          }
+        </script>
+      
+      </body>
+      </html>
